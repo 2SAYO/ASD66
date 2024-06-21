@@ -176,23 +176,8 @@ proxy = request.ProxyHandler(
  {"http":"127.0.0.1:443"}
  )
 request.install_opener(request.build_opener(proxy))
-
-    os.system('clear')
-    print(logo)
-    print('\x1b[1;96m[\x1b[38;5;196m1\x1b[1;96m] \x1b[1;97m𝐅𝐈𝐋𝐄 𝐂𝐋𝐎𝐍𝐈𝐍𝐆\n\x1b[1;96m[\x1b[38;5;196m2\x1b[1;96m] \x1b[1;97m𝐂𝐑𝐄𝐀𝐓 𝐅𝐈𝐋𝐄\n\x1b[1;96m[\x1b[38;5;196m3\x1b[1;96m] \x1b[1;97m𝐏𝐑𝐎𝐆𝐑𝐀𝐌𝐌𝐄𝐑')
-    print('\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰')
-    
-    
-    _SAYO___ = input(f'\x1b[1;97m𝐂𝐇𝐎𝐎𝐒𝐄 : {r}')
-    if _SAYO___ in ('1', '01'):
-        filecrack()
-    if _SAYO___ in ('2', '02'):
-    	creatfile()
-    if _SAYO___ in ('3', '03'):
-    	toasl()
 def syline():
 	print('\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰')
-
 logo=(f"""\033[1;31m⠀
 
 
@@ -228,7 +213,7 @@ def check_activation_code(user_code, activation_codes):
     if user_code in activation_codes:
         expiration_time = activation_codes[user_code]
         if current_time >= expiration_time:
-            linex()
+            syline()
             print_GA(f"{r}𝐄{w}𝐗{r}𝐏{w}𝐈{r}𝐑{w}𝐄{r}𝐃 {w}𝐂{r}𝐎{w}𝐃{r}𝐄 🕘")
             mdr = f"""𝗗𝗜𝗖𝗟𝗜𝗡𝗘𝗗 𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗕𝗘𝗖𝗔𝗨𝗦𝗘 𝗜𝗧 𝗜𝗦 𝗘𝗫𝗣𝗜𝗥𝗘𝗗 𝗖𝗢𝗗𝗘🕘\n
             𝗖𝗢𝗗𝗘 : {user_input_code}
@@ -236,7 +221,7 @@ def check_activation_code(user_code, activation_codes):
             requests.get('https://api.telegram.org/bot' + str(token3) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(mdr))
             return False
         else:
-            linex()
+            syline()
             print_GA(f"{r}𝐖{w}𝐎{r}𝐑{w}𝐊{r}𝐈{w}𝐍{r}𝐆 {w}𝐂{r}𝐎{r}𝐃{w}𝐄 ✅😁")
             logins = f"""𝗚𝗢𝗢𝗗 𝗢𝗣𝗘𝗡 𝗕𝗬 CODE✅\n
             CODE : {user_input_code}
@@ -245,7 +230,7 @@ def check_activation_code(user_code, activation_codes):
             time.sleep(5)
             return True
     else:
-        syline()
+        linex()
         print_GA(f"{r}𝐈{w}𝐍{r}𝐕{w}𝐀{r}𝐋{w}𝐈{r}𝐃 {w}𝐂{r}𝐎{w}𝐃{r}𝐄 ❌")
         eror = f"""𝗗𝗜𝗖𝗟𝗜𝗡𝗘𝗗 𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗕𝗘𝗖𝗔𝗨𝗦𝗘 𝗜𝗧 𝗜𝗦 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗖𝗢𝗗𝗘❌\n
             CODE : {user_input_code}
@@ -297,6 +282,19 @@ JDM += "\n\n" + video_link
 requests.post(f"https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&parse_mode=HTML&text={JDM}")
 os.system('clear')
 def SAYO():   
+    os.system('clear')
+    print(logo)
+    print('\x1b[1;96m[\x1b[38;5;196m1\x1b[1;96m] \x1b[1;97m𝐅𝐈𝐋𝐄 𝐂𝐋𝐎𝐍𝐈𝐍𝐆\n\x1b[1;96m[\x1b[38;5;196m2\x1b[1;96m] \x1b[1;97m𝐂𝐑𝐄𝐀𝐓 𝐅𝐈𝐋𝐄\n\x1b[1;96m[\x1b[38;5;196m3\x1b[1;96m] \x1b[1;97m𝐏𝐑𝐎𝐆𝐑𝐀𝐌𝐌𝐄𝐑')
+    print('\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰')
+    
+    
+    _SAYO___ = input(f'\x1b[1;97m𝐂𝐇𝐎𝐎𝐒𝐄 : {r}')
+    if _SAYO___ in ('1', '01'):
+        filecrack()
+    if _SAYO___ in ('2', '02'):
+    	creatfile()
+    if _SAYO___ in ('3', '03'):
+    	toasl()
 
 def clear():
 	os.system('clear')
